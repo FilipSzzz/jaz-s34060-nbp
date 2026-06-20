@@ -1,4 +1,5 @@
 package pl.pjatk.jazs34060nbp;
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -8,14 +9,21 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
+@Schema(name = "CurrencyRateEntity", description = "Entity for currency rate")
 public class CurrencyRateEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Schema(description = "Unique identifier for the currency rate")
     private Long id;
+    @Schema(description = "Currency code")
     private String waluta;
+    @Schema(description = "Currency rate")
     private double kursWaluty;
+    @Schema(description = "Start date of the currency rate")
     private LocalDate starDate;
+    @Schema(description = "End date of the currency rate")
     private LocalDate endDate;
+    @Schema(description = "Date and time when the currency rate was fetched")
     private LocalDateTime dateAndTime;
     public CurrencyRateEntity() {}
 
