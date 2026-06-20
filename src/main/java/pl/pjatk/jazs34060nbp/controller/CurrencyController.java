@@ -20,7 +20,8 @@ public class CurrencyController {
     public CurrencyController(CurrencyService currencyService) {
         this.currencyService = currencyService;
     }
-    @Operation(summary = "Get average currency rate for a given date range")
+    @Operation(summary = "Średni kurs waluty dla danego zakresu dat",
+            description = "Zwraca średni kurs waluty dla danego zakresu dat")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Średni kurs waluty dla podanego zakresu dat"),
             @ApiResponse(responseCode = "404", description = "Nie znaleziono danych w NBP"),
