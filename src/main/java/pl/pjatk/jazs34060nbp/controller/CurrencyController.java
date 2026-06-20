@@ -26,7 +26,8 @@ public class CurrencyController {
             @ApiResponse(responseCode = "404", description = "Nie znaleziono danych w NBP"),
             @ApiResponse(responseCode = "400", description = "Nieprawidłowe parametry zapytania"),
             @ApiResponse(responseCode = "500", description = "Błąd serwera podczas przetwarzania zapytania")
-    })    @GetMapping("/{currency}/{startDate}/{endDate}")
+    })
+    @GetMapping("/{currency}/{startDate}/{endDate}")
     public ResponseEntity<Double> getCurrencyForDates(@Parameter(description = "Trzyliterowy kod waluty wg standardu ISO 4217", example = "USD") @PathVariable String currency,
                                                     @Parameter(description = "Data początkowa zakresu w formacie RRRR-MM-DD", example = "2026-04-02")@PathVariable LocalDate startDate,
                                                     @Parameter(description = "Data końcowa zakresu w formacie RRRR-MM-DD", example = "2026-04-20")@PathVariable LocalDate endDate) {
