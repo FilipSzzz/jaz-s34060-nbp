@@ -1,4 +1,4 @@
-package pl.pjatk.jazs34060nbp;
+package pl.pjatk.jazs34060nbp.exception;
 
 public class CurrencyExceptionHandler extends RuntimeException {
     public CurrencyExceptionHandler(String message) {

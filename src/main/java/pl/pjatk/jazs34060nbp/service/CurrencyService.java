@@ -1,10 +1,14 @@
-package pl.pjatk.jazs34060nbp;
+package pl.pjatk.jazs34060nbp.service;
 
 import org.springframework.stereotype.Service;
+import pl.pjatk.jazs34060nbp.entity.CurrencyRateEntity;
+import pl.pjatk.jazs34060nbp.NbpApiClient;
+import pl.pjatk.jazs34060nbp.Rate;
+import pl.pjatk.jazs34060nbp.Root;
+import pl.pjatk.jazs34060nbp.repository.CurrencyRepository;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.Currency;
 import java.util.List;
 
 @Service
