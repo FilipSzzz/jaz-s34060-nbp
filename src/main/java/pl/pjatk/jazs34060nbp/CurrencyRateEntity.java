@@ -1,0 +1,73 @@
+package pl.pjatk.jazs34060nbp;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+@Entity
+public class CurrencyRateEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String waluta;
+    private double kursWaluty;
+    private LocalDate starDate;
+    private LocalDate endDate;
+    private LocalDateTime dateAndTime;
+    public CurrencyRateEntity() {}
+
+    public CurrencyRateEntity(String waluta, LocalDate starDate, LocalDate endDate, double kursWaluty) {
+        this.waluta = waluta;
+        this.starDate = starDate;
+        this.endDate = endDate;
+        this.kursWaluty = kursWaluty;
+    }
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getWaluta() {
+        return waluta;
+    }
+
+    public void setWaluta(String waluta) {
+        this.waluta = waluta;
+    }
+
+    public LocalDate getStarDate() {
+        return starDate;
+    }
+
+    public void setStarDate(LocalDate starDate) {
+        this.starDate = starDate;
+    }
+    public double getKursWaluty() {
+        return kursWaluty;
+    }
+
+    public void setKursWaluty(double kursWaluty) {
+        this.kursWaluty = kursWaluty;
+    }
+    public LocalDate getEndDate() {
+        return endDate;
+    }
+
+    public LocalDateTime getDateAndTime() {
+        return dateAndTime;
+    }
+
+    public void setDateAndTime(LocalDateTime dateAndTime) {
+        this.dateAndTime = dateAndTime;
+    }
+
+    public void setEndDate(LocalDate endDate) {
+        this.endDate = endDate;
+    }
+}
